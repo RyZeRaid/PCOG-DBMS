@@ -9,137 +9,132 @@
     <link href="styles/add-members.css" rel="stylesheet" type="text/css"/>
     <script src="scripts/add-members.js"></script>
 </head>
-<header>
-    <div class="container">
-        <img src="./img/pcog logo.png" alt="PCOG Logo">
-        <h1>Portmore Church of God Database Management System</h1>
-
-        <div class="logout">
-            <img src="./img/logout.png" alt="">
-            <p id="logout_user">Logout</p>
-        </div>
-    </div>
-</header>
 
 <body>
+    <div class="container">
+        <header>
+            <div class="container">
+                <img src="./img/pcog logo.png" alt="PCOG Logo">
+                <h1>Portmore Church of God Database Management System</h1>
+        
+                <div class="logout">
+                    <img src="./img/logout.png" alt="">
+                    <p id="logout_user">Logout</p>
+                </div>
+            </div>
+        </header>
 
+        <aside>
+            <div class="container">
+                <ul>
+                    <li><a href="">View Members</a></li>
+                    <li><a href="">Generate List</a></li>
+                    <li><a href="">Confirm Attendees</a></li>
+                    <li><a href="">View Archive</a></li>
+                </ul>
+            </div>
+        </aside>
 
-    <section id="left-sidebar">
-        <div class="container">
-            <ul>
-                <li><a href="">View Members</a></li>
-                <li><a href="">Generate List</a></li>
-                <li><a href="">Confirm Attendees</a></li>
-                <li><a href="">View Archive</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <main>
-        <div class="container">
-              
-            <div id="heading"><h1>Attendee List</h1></div>
-
-            <section id="form-section">
+        <main>
+            <div class="container">
                 
-                <div id="member-name">
+                <div id="heading"><h1>Attendee List</h1></div>
 
-                    <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname" required>
-
-                    <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname" required>
-                </div>
-
-
-                <div id="member-dob">
-                    <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required>
-                </div>
-
-
-                <div id="member-age-gender">
-
-                    <label for="age">Age:</label>
-                    <input type="text" id="age" name="age" required>
-
-                    <label for="gender">Gender:</label>
+                <section id="form-section">
                     
-                    <select name="gender" id="gender">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <div id="member-name">
 
-                </div>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname" required>
 
-
-                <div id="member-position">
-                    <label for="position">Position:</label>
-                    <input type="text" id="position" name="position"required>
-                </div>
-
-
-                <div id="member-address">
-
-                    <p>Home Address:</p>
-
-                    <div id="address1">
-                        <input type="text" id="add-line1" placeholder="Address 1">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" required>
                     </div>
 
-                    <div id="address2">
-                        <input type="text" id="add-line2" placeholder="Address 2">
+
+                    <div id="member-dob">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
                     </div>
 
-                    <div id="city-parish">
+
+                    <div id="member-age-gender">
+
+                        <label for="age">Age:</label>
+                        <input type="text" id="age" name="age" required>
+
+                        <label for="gender">Gender:</label>
                         
-                        <input type="text" id="city" placeholder="City">
-
-                        <label for="parish">Parish</label>
-
-                        <select name="parish" id="parish">
-                            <option value="clanderon">Clanderon</option>
-                            <option value="hanover">Hanover</option>
-                            <option value="kingston">Kingston</option>
-                            <option value="manchester">Manchester</option>
-                            <option value="portland">Portland</option>
-                            <option value="st. andrew">St. Andrew</option>
-                            <option value="st. ann">St. Ann</option>
-                            <option value="st. catherine">St. Catherine</option>
-                            <option value="st. elizabeth">St. Elizabeth</option>
-                            <option value="st. james">St. James</option>
-                            <option value="st. mary">St. Mary</option>
-                            <option value="st. thomas">St. Thomas</option>
-                            <option value="trelawny">Trelawny</option>
-                            <option value="westmoreland">Westmoreland</option>
+                        <select name="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
                         </select>
 
                     </div>
 
-                </div>
 
-            </section>
+                    <div id="member-position">
+                        <label for="position">Position:</label>
+                        <input type="text" id="position" name="position"required>
+                    </div>
 
-            <section id="button-section">
-                <div >
-                    <button type="button">Add Member</button>
-                </div>
-            </section>
-            
-        </div>
-    </main>
 
-    <aside id="right-sidebar">
-        <div class="container">
-            <div></div>
-        </div>
-    </aside>
+                    <div id="member-address">
 
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; 2020, Group 1</p>
-        </div>
-    </footer>
+                        <p>Home Address:</p>
+
+                        <div id="address1">
+                            <input type="text" id="add-line1" placeholder="Address 1">
+                        </div>
+
+                        <div id="address2">
+                            <input type="text" id="add-line2" placeholder="Address 2">
+                        </div>
+
+                        <div id="city-parish">
+                            
+                            <input type="text" id="city" placeholder="City">
+
+                            <label for="parish">Parish</label>
+
+                            <select name="parish" id="parish">
+                                <option value="clanderon">Clanderon</option>
+                                <option value="hanover">Hanover</option>
+                                <option value="kingston">Kingston</option>
+                                <option value="manchester">Manchester</option>
+                                <option value="portland">Portland</option>
+                                <option value="st. andrew">St. Andrew</option>
+                                <option value="st. ann">St. Ann</option>
+                                <option value="st. catherine">St. Catherine</option>
+                                <option value="st. elizabeth">St. Elizabeth</option>
+                                <option value="st. james">St. James</option>
+                                <option value="st. mary">St. Mary</option>
+                                <option value="st. thomas">St. Thomas</option>
+                                <option value="trelawny">Trelawny</option>
+                                <option value="westmoreland">Westmoreland</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section id="button-section">
+                    <div >
+                        <button type="button">Add Member</button>
+                    </div>
+                </section>
+                
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>Copyright &copy; 2020, Group 1</p>
+            </div>
+        </footer>
+</div>
     
 </body>
 
