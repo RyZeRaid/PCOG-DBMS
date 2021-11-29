@@ -20,6 +20,8 @@ window.onload = function(){
             window.location.href = "memberslist.php";
         }else if (e.target.id === "generateAttendee"){
             window.location.href = "AttendeeList.html";
+        }else if (e.target.id === "addMember") {
+            window.location.href = "add-members.html";
         }
     }
 
