@@ -8,8 +8,6 @@ window.onload = function(){
 
     function onClick(e) {
         let valid = 0;
-        
-        e.preventDefault();
 
         let username = document.querySelector("#username").value
         let password = document.querySelector("#password").value
@@ -34,8 +32,17 @@ window.onload = function(){
             const xhr = new XMLHttpRequest();
 
             xhr.onreadystatechange = function(){
+
+
                 if(this.readyState == 4 && this.status == 200){
                     document.getElementById("show").innerHTML = this.responseText;
+
+                    console.log(this.responseText)
+
+                    
+                    window.location.href = "HomeScreen.php";
+                    
+
                 }
             }
             xhr.open('GET', 'login.php?user='+ username + " " + password, true);

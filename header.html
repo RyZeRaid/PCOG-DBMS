@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <script src="login.js"></script>
 </head>
 
 <body>
@@ -20,7 +19,7 @@
     <main>
         <img src="./img/user-login.png" alt="">
 
-        <form>
+        <form method="post" action="login.php">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username">
             <p class="error"></p>
@@ -31,8 +30,9 @@
 
             <button id="btn" type="submit" name="login">Login</button>
         </form>
-    </main>
         <div id = "show"></div>
+    </main>
+       
     <footer>
         <p>Copyright &copy; 2020, Group 1</p>
     </footer>
