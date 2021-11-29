@@ -7,21 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Members</title>
     <link href="styles/add-members.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/add-members.js"></script>
 </head>
+<header>
+    <div class="container">
+        <img src="./img/pcog logo.png" alt="PCOG Logo">
+        <h1>Portmore Church of God Database Management System</h1>
+
+        <div class="logout">
+            <img src="./img/logout.png" alt="">
+            <p id="logout_user">Logout</p>
+        </div>
+    </div>
+</header>
 
 <body>
 
-    <header>
-        <div class="container">
-            <img src="./img/pcog logo.png" alt="PCOG Logo">
-            <h1>Portmore Church of God Database Management System</h1>
-
-            <div class="logout">
-                <img src="./img/logout.png" alt="">
-                <p id="logout_user">Logout</p>
-            </div>
-        </div>
-    </header>
 
     <section id="left-sidebar">
         <div class="container">
@@ -44,23 +45,23 @@
                 <div id="member-name">
 
                     <label for="fname">First name:</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="fname" name="fname" required>
 
                     <label for="lname">Last name:</label>
-                    <input type="text" id="lname" name="lname">
+                    <input type="text" id="lname" name="lname" required>
                 </div>
 
 
                 <div id="member-dob">
-                    <label for="lname">Date of Birth:</label>
-                    <input type="text" id="dob" name="dob">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
                 </div>
 
 
                 <div id="member-age-gender">
 
                     <label for="age">Age:</label>
-                    <input type="text" id="age" name="age">
+                    <input type="text" id="age" name="age" required>
 
                     <label for="gender">Gender:</label>
                     
@@ -74,7 +75,7 @@
 
                 <div id="member-position">
                     <label for="position">Position:</label>
-                    <input type="text" id="position" name="position">
+                    <input type="text" id="position" name="position"required>
                 </div>
 
 
