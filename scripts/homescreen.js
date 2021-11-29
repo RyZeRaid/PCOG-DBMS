@@ -5,7 +5,9 @@ window.onload = function(){
     let generateAttendee = document.querySelector('#generateAttendee')
     let viewArchive = document.querySelector('#viewArchive')
     let confirmAttendees = document.querySelector('#confirmAttendees')
+    let logout = document.querySelector('.logout')
 
+    logout.addEventListener("click", clicked);
     viewDatabase.addEventListener("click", onClick);
     addMember.addEventListener("click", onClick);
     generateAttendee.addEventListener("click", onClick);
@@ -13,8 +15,15 @@ window.onload = function(){
     confirmAttendees.addEventListener("click", onClick);
 
     function onClick(e){
+
         if (e.target.id === "viewDatabase"){
             window.location.href = "memberslist.php";
+        }else if (e.target.id === "generateAttendee"){
+            window.location.href = "AttendeeList.html";
         }
+    }
+
+    function clicked(e){
+        window.location.href = "logout.php";
     }
 }
