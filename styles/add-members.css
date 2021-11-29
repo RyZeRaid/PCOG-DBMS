@@ -3,28 +3,24 @@ body{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif ;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
 .container{
-    padding-top: 1px;
-    padding-bottom: 1px;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 12% auto ;
     grid-template-areas: 
-    "header header header"
-    "left-sidebar main right-sidebar"
-    "footer footer footer"
+    "header header"
+    "sidebar main"
     ;
-
 }
 
 /*
 Header Section
 */
 
-
-header{
+header {
     grid-area: header;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -40,10 +36,16 @@ header img {
     height: 50px;
 }
 
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+
 .logout {
-    margin-left: 100px;
+    margin-left: 500px;
     display: flex;
     font-size: 18px;
+    float: right;
 }
 
 .logout img {
@@ -53,13 +55,36 @@ header img {
     height: 40px;
 }
 
+.logout:hover {
+    cursor: pointer;
+}
+
 /*
-Left Sidebar Section
+Sidebar Section
 */
 
-aside #left-sidebar{
-    grid-area: left-sidebar;
+aside{
+    grid-area: sidebar;
+    height: 85vh;
     background-color: #F5F5F5;
+
+}
+
+#side{
+    padding-top: 10px;
+    padding-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 /*
@@ -67,24 +92,27 @@ Main Section
 */
 
 main{
-    grid-area: main;
+    grid: main;
+
 }
 
 #form-section{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 15px;
 }
 
-aside #right-sidebar{
-    grid-area: right-sidebar;
-}
+/*
+Footer Section
+*/
 
-footer {
+footer{
     grid-area: footer;
-
-    bottom:0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     background-color: #9099D4;
     color: white;
 }

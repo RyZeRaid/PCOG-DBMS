@@ -6,32 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Members</title>
-    <link href="styles/add-members.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/add-members.css" rel="stylesheet"/>
     <script src="scripts/add-members.js"></script>
 </head>
 
 
-
 <body>
 
-    <header>
-        <div class="container">
-            <img src="./img/pcog logo.png" alt="PCOG Logo">
-            <h1>Portmore Church of God Database Management System</h1>
-    
+    <div class="container">
+
+        <header>
+
+            <div class="logo">
+                <img src="./img/pcog logo.png" alt="PCOG Logo">
+                <h1>Portmore Church of God Database Management System</h1>
+            </div>
+            
             <div class="logout">
                 <img src="./img/logout.png" alt="">
                 <p id="logout_user">Logout</p>
             </div>
-        </div>
-    </header>
+        
+        </header>
 
-    <main>
-        <div class="container">
+        <aside id="left-sidebar">
+            <div id="side">
+                <a href="">View Members</a>
+                <a href="">Generate List</a>
+                <a href="">Confirm Attendees</a>
+                <a href="">View Archive</a>
+            </div>   
             
+        </aside>
+
+        <main>
+        
             <div id="form-section">
 
-                <div id="heading"><h1>Attendee List</h1></div>
+                <div id="heading"><h1>Add Member</h1></div>
                 
                 <div id="member-name">
 
@@ -67,6 +79,14 @@
                 <div id="member-position">
                     <label for="position">Position:</label>
                     <input type="text" id="position" name="position" required>
+                </div>
+
+                <div id="contact">
+                    <label for="position">Phone Number:</label>
+                    <input type="text" id="position" name="position">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
                 </div>
 
 
@@ -114,31 +134,17 @@
                 </div>
 
             </div>
+        
+        </main>
 
-        </div>
-    </main>
+        
 
-    <aside id="left-sidebar">
-        <div class="container">
-            <ul>
-                <li><a href="">View Members</a></li>
-                <li><a href="">Generate List</a></li>
-                <li><a href="">Confirm Attendees</a></li>
-                <li><a href="">View Archive</a></li>
-            </ul>
-        </div>
-    </aside>
+    </div>
 
-    <aside id="right-sidebar">
-        <div class="container">
-            <div></div>
-        </div>
-    </aside>
-
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; 2020, Group 1</p>
-        </div>
+    <footer> 
+        <div>
+            Copyright &copy; 2020, Group 1
+        </div> 
     </footer>
     
 </body>
