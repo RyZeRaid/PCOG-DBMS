@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+input {
+    border-radius: 15px;
+    width: 300px;
+    margin-top: 5px;
+}
+
+main img {
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+
+.error, .error1 {
+    color: red;
+}
