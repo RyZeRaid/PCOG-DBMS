@@ -3,28 +3,19 @@ body{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif ;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    display:flex;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: 15% 85%;
-    grid-template-rows: 12% auto ;
-    grid-template-areas: 
-    "header header"
-    "sidebar main"
-    ;
-}
 
 /*
 Header Section
 */
 
-header {
-    grid-area: header;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
+header .container{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
     color: black;
     font-size: 10px;
     background-color: #D6D6D6;
@@ -36,16 +27,10 @@ header img {
     height: 50px;
 }
 
-.logo{
-    display: flex;
-    flex-direction: row;
-}
-
 .logout {
-    margin-left: 500px;
+    margin-left: 900px;
     display: flex;
     font-size: 18px;
-    float: right;
 }
 
 .logout img {
@@ -55,36 +40,13 @@ header img {
     height: 40px;
 }
 
-.logout:hover {
-    cursor: pointer;
-}
-
 /*
-Sidebar Section
+Left Sidebar Section
 */
 
-aside{
-    grid-area: sidebar;
-    height: 85vh;
+#left-sidebar{
+    grid-area: left-sidebar;
     background-color: #F5F5F5;
-
-}
-
-#side{
-    padding-top: 10px;
-    padding-left: 10px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
 }
 
 /*
@@ -92,27 +54,23 @@ Main Section
 */
 
 main{
-    grid: main;
-
+    grid-area: main;
 }
 
 #form-section{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 15px;
 }
 
-/*
-Footer Section
-*/
+#right-sidebar{
+    grid-area: right-sidebar;
+}
 
-footer{
-    grid-area: footer;
+footer {
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    bottom:0;
     background-color: #9099D4;
     color: white;
 }
