@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/memberslist.css"> 
     <link rel="stylesheet" href="styles/footer.css">
-    <script src="logout.js"></script>
+    <script src="scripts/memberslist.js"></script>
     <title>Member's List</title>
 </head>
 
@@ -29,7 +29,7 @@
                     <a href="">Add Member</a>
                 </div>
                 <div class="buttonaside">
-                    <a href="">Generate List</a>
+                    <a href="AttendeeList.html">Generate List</a>
                 </div>
                 <div class="buttonaside">
                     <a href="">Confirm Attendees</a>
@@ -49,12 +49,11 @@
                 </div>
             </form>
                 <div class="buttonb">
-                    <button class="search">Search</button>
-                    <button class="sort">Sort</button>
+                    <button class="search" id="search">Search</button>
+                    <button class="sort" id="sort">Sort</button>
                 </div>
             </div>
-            <div class="table">
-            </div>
+            <div class="table" id="table"></div>
         </main>
     </div>
 </body>

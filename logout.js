@@ -2,9 +2,9 @@ window.onload = function(){
 
     let logout = document.querySelector('.logout')
 
-    logout.addEventListener("click", onClick);
+    logout.addEventListener("click", Click);
 
-    function onClick(e){
+    function Click(e){
         window.location.href = "logout.php";
     }
 }
