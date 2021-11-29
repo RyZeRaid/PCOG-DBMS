@@ -11,6 +11,8 @@ CREATE TABLE `user` (
     PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
 
+INSERT INTO `user` VALUES('id', 'testuserusername', 'password123', SYSDATE());
+
 DROP TABLE IF EXISTS `member`;
 CREATE TABLE `member` (
     `id` INT unsigned AUTO_INCREMENT,
@@ -56,3 +58,4 @@ CREATE TABLE `attendance` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 /* GRANT ALL PRIVILEGES ON user.* TO 'new_user'@'localhost'IDENTIFIED BY 'password123';*/
+/* GRANT ALL PRIVILEGES ON churchofgoddb.* TO 'new_user'@'localhost'IDENTIFIED BY 'password123';*/
