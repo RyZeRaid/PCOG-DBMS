@@ -23,7 +23,7 @@ $address = $_GET['add1'] . " ". $_GET['add2'] ." ". $_GET['city'] ." ". $_GET['p
 $phonenum = $_GET['phonenum'];
 $email = $_GET['email'];
 $curday= new DateTime();
-$today = $curday->format('d-m-Y ');;
+$today = $curday->format('Y-m-d ');
 
 $fname = trim(filter_var($fname, FILTER_SANITIZE_STRING));
 $lname = trim(filter_var($lname, FILTER_SANITIZE_STRING));
@@ -37,43 +37,54 @@ $phonenum= trim(filter_var($phonenum, FILTER_SANITIZE_STRING));
 
 $check = date_diff(date_create($dob),date_create($today));
 
-if($check == $age){
+if($check->format("%y") == $age){
     echo'correct age';
     $age= mysqli_real_escape_string($conn, $age);
     $dob= mysqli_real_escape_string($conn, $dob);
+}else{
+    echo '<span style= "color: red;"> The age does not correspond to the date of birth given.</span>';
+    return;
 }
 
 if(empty($fname)){
     echo '<span style= "color: red;"> Please enter a value for First Name.</span>';
+    return;
 }else if(!preg_match('/^[a-zA-Z\s]+$/',$fname))
 {
     echo '<span style= "color: red;"> First Name must be letters only.</span>';
+    return;
 }else{
     $fname= mysqli_real_escape_string($conn, $fname);
 }
 
 if(empty($lname)){
     echo '<span style= "color: red;"> Please enter a value for Last Name.</span>';
+    return;
 }else if(!preg_match('/^[a-zA-Z\s]+$/',$lname))
 {
     echo '<span style= "color: red;"> Last Name must be letters only.</span>';
+    return;
 }else{
     $lname= mysqli_real_escape_string($conn, $lname);
 }
 
 if(empty($phonenum)){
     echo '<span style= "color: red;"> Please enter a value for Phone number.</span>';
+    return;
 }else if(!is_numeric($phonenum))
 {
     echo '<span style= "color: red;">  must be letters only.</span>';
+    return;
 }else{
     $phonenum= mysqli_real_escape_string($conn, $phonenum);
 }
 
 if(empty($email)){
     echo '<span style= "color: red;"> Please enter a value for email.</span>';
+    return;
 }else if(!filter_var($email,FILTER_SANITIZE_EMAIL)){
     echo '<span style= "color: red;"> Email must be a valid email address.</span>';
+    return;
 }else{
     $email = mysqli_real_escape_string($conn, $email);
 }
