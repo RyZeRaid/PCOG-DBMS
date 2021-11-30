@@ -23,15 +23,23 @@
 
 <body>
     <div class="Attendee">
+
         <aside>
             <a href="memberslist.html">View Members</a>
             <a href="add-members.html">Add Members</a>
             <a href="overridelist.html">Override List</a>
             <a href="confirmattendees.html">Confirm Attendees</a>
             <a href="viewarchives.html">View Archive</a>
-        </aside>    
+        </aside>
+
         <main>
             <h1> Attendee List</h1>
+            <div id="attendance-count">
+                <label for=""></label>
+                <input type="text" id="" placeholder="How many members will be in attendance?">
+                <div id="member-count"></div>
+            </div>
+
             <div class="List"></div>
             <div class="options">
                 <button id="generateList">Generate List</button>
@@ -40,10 +48,12 @@
             </div>
             <div class="table"></div>
         </main>
+
     </div>   
 </body>
 
 <footer>
     <p>Copyright &copy; 2020, Group 1</p>
 </footer>
+
 </html>

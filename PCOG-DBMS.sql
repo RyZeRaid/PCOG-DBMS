@@ -56,9 +56,31 @@ CREATE TABLE `priority1` (
     `firstname` VARCHAR(255) NOT NULL ,
     `lasttname` VARCHAR(255) NOT NULL ,
     `position` VARCHAR(50) NOT NULL ,
-    `priority` VARCHAR(12) NOT NULL,
+    `priority` INT(11) NOT NULL,
     PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `priority1` VALUES(0,'testfirstname', 'testlastname', 'member', 0),
+(1,'Khan', 'Yunis', 'member', 0),
+(2,'Kyle', 'Pottinger', 'member', 0),
+(3,'Ajani', 'Lewise', 'member', 0),
+(4,'Onandi', 'Skeen', 'member', 0),
+(5,'Jamaal', 'Henry', 'member', 0),
+(6,'Nikaylia', 'Gayle', 'member', 0),
+(7,'Sudhish', 'Sepaul', 'memebr', 0),
+(8,'Carl', 'Heron', 'member', 0),
+(9,'Chris', 'Green', 'member', 0),
+(10,'Anthony', 'James', 'member', 0),
+(11,'Angela', 'James', 'member', 0),
+(12,'Ryan', 'Ebanks', 'member', 0),
+(13,'Jet', 'Blevins', 'member', 0),
+(14,'Ramon', 'Cheesom', 'member', 0),
+(15,'Quintin', 'Wu', 'member', 0),
+(16,'Joshua', 'Dixon', 'member', 0),
+(17,'UI', 'Lewise', 'member', 0),
+(18,'Carl-Christopher', 'Blane', 'member', 0),
+(19,'Sydeon', 'Brown', 'member', 0),
+(20,'Sarah', 'Allen', 'member', 0);
 
 DROP TABLE IF EXISTS `priority2`;
 CREATE TABLE `priority2` (
@@ -66,7 +88,7 @@ CREATE TABLE `priority2` (
     `firstname` VARCHAR(255) NOT NULL ,
     `lasttname` VARCHAR(255) NOT NULL ,
     `position` VARCHAR(50) NOT NULL ,
-    `priority` VARCHAR(12) NOT NULL,
+    `priority` INT(11) NOT NULL,
     PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

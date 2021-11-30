@@ -35,6 +35,15 @@ body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.options{
+    padding-bottom: 20px;
+}
+
+#attendance-count{
+    display: flex;
+    flex-direction: row;
+}
+
 a{
     color: black;
     text-decoration: none;
