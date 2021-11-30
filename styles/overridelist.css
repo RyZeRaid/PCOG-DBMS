@@ -1,0 +1,150 @@
+body,html{
+    height: 100%;
+    
+}
+
+body{
+    font-size: 18px;
+    min-height: 100vh;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif ;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    grid-area: header;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: flex;
+    color: black;
+    font-size: 10px;
+    background-color: #D6D6D6;
+}
+
+.side1{
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: #F5F5F5;
+    padding-left: 0%;
+    float: left;
+    height:auto;
+    min-height:100% !important;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin-left: 0%;
+    width: 85%;
+    float: left;
+    min-height:100% !important;
+    height:auto;
+}
+
+
+footer {
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    background-color: #9099D4;
+    color: white;
+    clear: both;
+}
+
+
+.Home{
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+input[type=text], select {
+    width: 550px;
+    padding: 12px 20px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.table{
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+table{
+    margin-left:auto;
+    margin-right: auto;
+    border: 3px solid black;
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+th,tr{
+    margin-right: 10%;
+    
+}
+
+.logout {
+    margin-left: 700px;
+    display: flex;
+    font-size: 18px;
+}
+
+.logout img {
+    padding-top: 7px;
+    padding-right: 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+header img {
+    padding-left: 25px;
+    width: 55px;
+    height: 50px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: palevioletred;
+}
+
+.buttonaside{
+    margin-left: 8px;
+    padding-top: 10px;
+}
+
+button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:black;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
