@@ -23,7 +23,7 @@ $address = $_GET['add1'] . " ". $_GET['add2'] ." ". $_GET['city'] ." ". $_GET['p
 $phonenum = $_GET['phonenum'];
 $email = $_GET['email'];
 $curday= new DateTime();
-$today = $curday->format('d-m-Y ');;
+$today = $curday->format('Y-m-d ');
 
 $fname = trim(filter_var($fname, FILTER_SANITIZE_STRING));
 $lname = trim(filter_var($lname, FILTER_SANITIZE_STRING));
@@ -37,10 +37,13 @@ $phonenum= trim(filter_var($phonenum, FILTER_SANITIZE_STRING));
 
 $check = date_diff(date_create($dob),date_create($today));
 
-if($check == $age){
+if($check->format("%y") == $age){
     echo'correct age';
     $age= mysqli_real_escape_string($conn, $age);
     $dob= mysqli_real_escape_string($conn, $dob);
+}else{
+
+    echo '<span style= "color: red;"> The age does not correspond to the date of birth given.</span>';
 }
 
 if(empty($fname)){
