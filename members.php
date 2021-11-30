@@ -13,6 +13,7 @@ if(!$conn){
 }
 
 $member = $_REQUEST['member'];
+$option = $_REQUEST['option'];
 $context = $_REQUEST['context'];
 
 if($member != ""){
@@ -20,10 +21,35 @@ if($member != ""){
     $member = trim($member);
 }
 
-if($member === ""){
+if($member === "" && $context === "search"){
     $stmt = $conn->query("SELECT * FROM member");
-}else {
+}else if($member !== "" && $option === "firstname" && $context === "search"){
     $stmt = $conn->query("SELECT * FROM member WHERE firstname LIKE '%$member%'");
+}else if($member !== "" && $option === "lastname" && $context === "search"){
+    $stmt = $conn->query("SELECT * FROM member WHERE lasttname LIKE '%$member%'");
+}else if($member !== "" && $option === "age" && $context === "search"){
+    $stmt = $conn->query("SELECT * FROM member WHERE age LIKE '%$member%'");
+}else if($member !== "" && $option === "gender" && $context === "search"){
+    $stmt = $conn->query("SELECT * FROM member WHERE gender = '$member';");
+}
+
+if($member === "" && $context === "sort" && $option === "firstname"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY firstname ASC");
+}else if($member === "" && $context === "sort" && $option === "lastname"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY lasttname ASC");
+}else if($member === "" && $context === "sort" && $option === "age"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY age ASC");
+}else if($member === "" && $context === "sort" && $option === "gender"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY gender ASC");
+}
+else if($member !== "" && $option === "firstname" && $context === "sort"){
+    $stmt = $conn->query("SELECT * FROM member WHERE firstname LIKE '%$member%' ORDER BY firstname ASC");
+}else if($member !== "" && $option === "lastname" && $context === "sort"){
+    $stmt = $conn->query("SELECT * FROM member WHERE lasttname LIKE '%$member%' ORDER BY lasttname ASC" );
+}else if($member !== "" && $option === "age" && $context === "sort"){
+    $stmt = $conn->query("SELECT * FROM member WHERE age LIKE '%$member%' ORDER BY lasttname ASC");
+}else if($member !== "" && $option === "gender" && $context === "sort"){
+    $stmt = $conn->query("SELECT * FROM member WHERE gender = '$member' ORDER BY lasttname ASC;");
 }
 
 

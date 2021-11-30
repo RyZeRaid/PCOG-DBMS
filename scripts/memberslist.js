@@ -54,7 +54,7 @@ window.onload = function(){
             }
         }
         if(e.target.id === "search" && response === ""){
-            xhr.open('GET', 'members.php?member='+response+"&context", true);
+            xhr.open('GET', 'members.php?member='+response+"&context=search"+"&option", true);
         }else if (e.target.id === "search" && response !== "") {
             document.getElementById("table").innerHTML = "Please Select a Search key";
         }
