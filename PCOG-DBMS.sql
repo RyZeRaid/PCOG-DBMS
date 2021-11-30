@@ -28,6 +28,28 @@ CREATE TABLE `member` (
     PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
 
+INSERT INTO `member` VALUES(0,'testfirstname', 'testlastname', 20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew','myemail.address@gmail.com', 87682384521, 20-03-2001),
+(1,'Khan', 'Yunis',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com', 87682384521, 20-03-2001),
+(2,'Kyle', 'Pottinger',20, 'Male','member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87696754521, 20-03-2001),
+(3,'Ajani', 'Lewise',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87609094521, 20-03-2001),
+(4,'Onandi', 'Skeen',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87607074521, 20-03-2001),
+(5,'Jamaal', 'Henry',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87667454521, 20-03-2001),
+(6,'Nikaylia', 'Gayle',20, 'Female',  'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87655794521, 20-03-2001),
+(7,'Sudhish', 'Sepaul',20, 'Male', 'memebr', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87688644521, 20-03-2001),
+(8,'Carl', 'Heron',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87680968521, 20-03-2001),
+(9,'Chris', 'Green',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',8769278521, 20-03-2001),
+(10,'Anthony', 'James',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew','myemail.address@gmail.com',87643814521, 20-03-2001),
+(11,'Angela', 'James',20, 'Female', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87676214521, 20-03-2001),
+(12,'Ryan', 'Ebanks',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87676494521, 20-03-2001),
+(13,'Jet', 'Blevins',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87612424521, 20-03-2001),
+(14,'Ramon', 'Cheesom',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87688764921, 20-03-2001),
+(15,'Quintin', 'Wu',20, 'Male', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87656729521, 20-03-2001),
+(16,'Joshua', 'Dixon',20, 'Male', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87632144521, 20-03-2001),
+(17,'UI', 'Lewise',20, 'female', 'member','8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',87667894221, 20-03-2001),
+(18,'Carl-Christopher', 'Blane',20, 'Male', 'member', '8 myadress avenue kingston 10 St. catherine', 'myemail.address@gmail.com',87687592521, 20-03-2001),
+(19,'Sydeon', 'Brown',20, 'Female', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',8768749521, 20-03-2001),
+(20,'Sarah', 'Allen',20, 'Female', 'member', '8 myadress avenue kingston 10 St. andrew', 'myemail.address@gmail.com',8768749521, 20-03-2001);
+
 DROP TABLE IF EXISTS `priority1`;
 CREATE TABLE `priority1` (
     `id` INT(11) NOT NULL,
