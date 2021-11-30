@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/memberslist.css"> 
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/edit-members.css">
+    <script src="scripts/edit-members.js"></script>
+    <title>Edit Member List</title>
+</head>
+
+<body>
+    
+    <div class="container">
+    <header>
+        <img src="./img/pcog logo.png" alt="">
+        <h1>Portmore Church of God Database Management System</h1>
+    
+        <div class="logout">
+            <img src="./img/logout.png" alt="">
+            <p id="logout_user">Logout</p>
+        </div>
+    </header> 
+
+        <aside class="side1">
+            <div class="asiderleft">
+                <div class="buttonaside">
+                    <a href="add-members.html">Add Member</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="AttendeeList.html">Generate List</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="overridelist.html">Override List</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="confirmattendees.html">Confirm Attendees</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="viewarchives.html">View Archive</a>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="main">
+            <h1>Edit Member</h1>
+            <p>Please enter the ID of the member you would like to edit:</p>
+            <form action="#" method="post" id="form">
+                <div id = "form-div">
+                    <input type="text" name="text" id="text" placeholder="">
+                </div>
+            </form>
+
+                <div class="button">
+                    <button class="editInfo" id="editInfo">Edit Member</button>
+                </div>
+            </div>
+
+            <div class="table" id="table"></div>
+
+            <div id="edit">
+                <div id="form-section">
+        
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname" required>
+
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                
+
+
+                
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+
+                    <label for="age">Age:</label>
+                    <input type="text" id="age" name="age" required>
+
+                    <label for="gender">Gender:</label>
+                    
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="position">Position:</label>
+                    <input type="text" id="position" name="position" required>
+
+                    <label for="position">Phone Number:</label>
+                    <input type="text" id="phonenum" name="phonenum">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+
+
+                    <p>Home Address:</p>
+
+                
+                    <input type="text" id="add-line1" placeholder="Address 1">
+                
+
+                
+                    <input type="text" id="add-line2" placeholder="Address 2">
+                    
+
+                    
+                        
+                    <input type="text" id="city" placeholder="City">
+
+                    <label for="parish">Parish</label>
+
+                    <select name="parish" id="parish">
+                        <option value="clanderon">Clanderon</option>
+                        <option value="hanover">Hanover</option>
+                        <option value="kingston">Kingston</option>
+                        <option value="manchester">Manchester</option>
+                        <option value="portland">Portland</option>
+                        <option value="st. andrew">St. Andrew</option>
+                        <option value="st. ann">St. Ann</option>
+                        <option value="st. catherine">St. Catherine</option>
+                        <option value="st. elizabeth">St. Elizabeth</option>
+                        <option value="st. james">St. James</option>
+                        <option value="st. mary">St. Mary</option>
+                        <option value="st. thomas">St. Thomas</option>
+                        <option value="trelawny">Trelawny</option>
+                        <option value="westmoreland">Westmoreland</option>
+                    </select>
+                    
+                    <div id="button-section">
+                        <button type="submit" id = "button" name= "button">Edit Member</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2020, Group 1</p>
+    </footer>
+</body>
+
+
+
+</html>
