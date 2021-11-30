@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-body,html{
-    height: 100%;
-}
-
 body{
     font-size: 18px;
-    min-height: 100vh;
-=======
-body{
-    font-size: 18px;
->>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif ;
     margin: 0;
     padding: 0;
 }
 
-<<<<<<< HEAD
-header {
-    grid-area: header;
-    padding-top: 20px;
-    padding-bottom: 20px;
-=======
 .container{
     display: grid;
     grid-template-columns: 15% 85%;
@@ -34,85 +18,12 @@ header {
     grid-area: header;
     padding-top: 10px;
     padding-bottom: 10px;
->>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
     display: flex;
     color: black;
     font-size: 10px;
     background-color: #D6D6D6;
 }
 
-<<<<<<< HEAD
-.side1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    float: left;
-    height:auto;
-    min-height:100% !important;
-    
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    padding-top:50px;
-    align-items: center;
-    background-color: purple;
-    margin-left: 0%;
-    width: 80%;
-    float: left;
-    min-height:100% !important;
-    height:auto;
-}
-
-
-
-button{
-    margin: 20px;
-    width:185px;
-    height: 50px;
-    border-radius: 8px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-footer {
-    width: 100%;
-    position:fixed;
-    bottom:0;
-    background-color: #9099D4;
-    color: white;
-    clear: both;
-}
-
-
-.Home{
-    height: 100%;
-    background-color:pink;
-}
-
-
-
-.table{
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-}
-table{
-    margin-left:auto;
-    margin-right: auto;
-    border: 3px solid black;
-    margin-bottom: 10%;
-    margin-top: 10%;
-}
-th,tr{
-    margin-right: 10%;
-    
-=======
 header img {
     padding-left: 25px;
     width: 55px;
@@ -198,5 +109,4 @@ input[type=text], select {
     display: flex;
     flex-direction: column;
     align-items: center;
->>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
 }
