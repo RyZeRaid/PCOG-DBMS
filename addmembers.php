@@ -19,11 +19,17 @@ $dob = $_GET['dob'];
 $age = $_GET['age'];
 $gender = $_GET['gender'];
 $position = $_GET['position'];
-$address = $_GET['add1'] . " ". $_GET['add2'] ." ". $_GET['city'] ." ". $_GET['parish'];
 $phonenum = $_GET['phonenum'];
 $email = $_GET['email'];
 $curday= new DateTime();
 $today = $curday->format('Y-m-d ');
+
+if(empty($_GET['add1']) || empty($_GET['add2']) || empty($_GET['city']) || $_GET['parish'] == "None"){
+    echo '<span style= "color: red;"> Please select a Parish and add information to Address.</span>';
+    return;
+}else{
+    $address = $_GET['add1'] . " ". $_GET['add2'] ." ". $_GET['city'] ." ". $_GET['parish'];
+}
 
 $fname = trim(filter_var($fname, FILTER_SANITIZE_STRING));
 $lname = trim(filter_var($lname, FILTER_SANITIZE_STRING));
@@ -88,6 +94,15 @@ if(empty($email)){
 }else{
     $email = mysqli_real_escape_string($conn, $email);
 }
+
+if($gender === "None")
+{
+    echo '<span style= "color: red;"> There must be a Gender selected.</span>';
+    return;
+}else{
+    $gender= mysqli_real_escape_string($conn, $gender);
+}
+
 
 $address = mysqli_real_escape_string($conn, $address);
 $position = mysqli_real_escape_string($conn, $position);
