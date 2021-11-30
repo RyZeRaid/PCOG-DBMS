@@ -8,7 +8,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 15% 85%;
-    grid-template-rows: 12% auto;
+    grid-template-rows: 1% auto;
     grid-template-areas: 
         "header header"
         "sidebar main"
@@ -49,7 +49,7 @@ header img {
 
 aside{
     grid-area: sidebar;
-    height: 85vh;
+    height: 1000vh;
     background-color: #F5F5F5;
 }
 
