@@ -42,41 +42,49 @@ if($check->format("%y") == $age){
     $age= mysqli_real_escape_string($conn, $age);
     $dob= mysqli_real_escape_string($conn, $dob);
 }else{
-
     echo '<span style= "color: red;"> The age does not correspond to the date of birth given.</span>';
+    return;
 }
 
 if(empty($fname)){
     echo '<span style= "color: red;"> Please enter a value for First Name.</span>';
+    return;
 }else if(!preg_match('/^[a-zA-Z\s]+$/',$fname))
 {
     echo '<span style= "color: red;"> First Name must be letters only.</span>';
+    return;
 }else{
     $fname= mysqli_real_escape_string($conn, $fname);
 }
 
 if(empty($lname)){
     echo '<span style= "color: red;"> Please enter a value for Last Name.</span>';
+    return;
 }else if(!preg_match('/^[a-zA-Z\s]+$/',$lname))
 {
     echo '<span style= "color: red;"> Last Name must be letters only.</span>';
+    return;
 }else{
     $lname= mysqli_real_escape_string($conn, $lname);
 }
 
 if(empty($phonenum)){
     echo '<span style= "color: red;"> Please enter a value for Phone number.</span>';
+    return;
 }else if(!is_numeric($phonenum))
 {
     echo '<span style= "color: red;">  must be letters only.</span>';
+    return;
 }else{
     $phonenum= mysqli_real_escape_string($conn, $phonenum);
 }
 
 if(empty($email)){
     echo '<span style= "color: red;"> Please enter a value for email.</span>';
+    return;
 }else if(!filter_var($email,FILTER_SANITIZE_EMAIL)){
     echo '<span style= "color: red;"> Email must be a valid email address.</span>';
+    return;
 }else{
     $email = mysqli_real_escape_string($conn, $email);
 }
