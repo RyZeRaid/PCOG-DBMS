@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body,html{
     height: 100%;
 }
@@ -5,21 +6,42 @@ body,html{
 body{
     font-size: 18px;
     min-height: 100vh;
+=======
+body{
+    font-size: 18px;
+>>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sansserif ;
     margin: 0;
     padding: 0;
 }
 
+<<<<<<< HEAD
 header {
     grid-area: header;
     padding-top: 20px;
     padding-bottom: 20px;
+=======
+.container{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 12% auto;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+}
+
+header {
+    grid-area: header;
+    padding-top: 10px;
+    padding-bottom: 10px;
+>>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
     display: flex;
     color: black;
     font-size: 10px;
     background-color: #D6D6D6;
 }
 
+<<<<<<< HEAD
 .side1{
     display: flex;
     flex-direction: column;
@@ -90,4 +112,91 @@ table{
 th,tr{
     margin-right: 10%;
     
+=======
+header img {
+    padding-left: 25px;
+    width: 55px;
+    height: 50px;
+}
+
+.logout {
+    margin-left: 700px;
+    display: flex;
+    font-size: 18px;
+}
+
+.logout img {
+    padding-top: 7px;
+    padding-right: 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+aside{
+    grid-area: sidebar;
+    height: 85vh;
+    background-color: #F5F5F5;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: palevioletred;
+}
+
+aside div div {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+button{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:black;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+
+input[type=text], select {
+    width: 550px;
+    padding: 12px 20px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
 }

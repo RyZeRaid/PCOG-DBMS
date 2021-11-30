@@ -20,4 +20,8 @@ if($member != ""){
     $member = trim($member);
 }
 
+$stmt = $conn->query("SELECT * FROM member WHERE name LIKE '%$member%';");
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 echo $member;
+
