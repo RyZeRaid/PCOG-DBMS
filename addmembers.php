@@ -6,23 +6,24 @@ $username = 'new_user';
 $password = 'password123';
 $dbname = 'churchofgoddb';
 
+echo'shows ';
+
 $conn = mysqli_connect($host , $username, $password, $dbname);
 if(!$conn){
     echo'Connection Error:' . mysqli_connect_error();
 }
 
-$fname = $_POST['fname'];
-$lname = $_POST['lname'];
-$dob = $_POST['dob'];
-$age = $_POST['age'];
-$gender = $_POST['gender'];
-$position = $_POST['position'];
-$address = $_POST['add1'] + " "+ $_POST['add2'] +" "+ $_POST['city'] +" "+ $_POST['parish'];
-$phonenum = $_POST['phonenum'];
-$email = $_POST['email'];
+$fname = $_GET['fname'];
+$lname = $_GET['lname'];
+$dob = $_GET['dob'];
+$age = $_GET['age'];
+$gender = $_GET['gender'];
+$position = $_GET['position'];
+$address = $_GET['add1'] . " ". $_GET['add2'] ." ". $_GET['city'] ." ". $_GET['parish'];
+$phonenum = $_GET['phonenum'];
+$email = $_GET['email'];
 $curday= new DateTime();
-
-echo $curday->format('m-d-Y').'\n';
+$today = $curday->format('d-m-Y ');;
 
 $fname = trim(filter_var($fname, FILTER_SANITIZE_STRING));
 $lname = trim(filter_var($lname, FILTER_SANITIZE_STRING));
@@ -32,9 +33,9 @@ $gender = trim(filter_var($gender, FILTER_SANITIZE_STRING));
 $position = trim(filter_var($position, FILTER_SANITIZE_STRING));
 $address = filter_var($address, FILTER_SANITIZE_STRING);
 $phonenum= trim(filter_var($phonenum, FILTER_SANITIZE_STRING));
-$email = filter_var($email, FILTER_VALIDATE_EMAIL));
 
-$check = date_diff(date_create($dob),date_create($curday));
+
+$check = date_diff(date_create($dob),date_create($today));
 
 if($check == $age){
     echo'correct age';
@@ -57,14 +58,14 @@ if(empty($lname)){
 {
     echo '<span style= "color: red;"> Last Name must be letters only.</span>';
 }else{
-    $lname= mysqli_real_escape_string($conn, $last);
+    $lname= mysqli_real_escape_string($conn, $lname);
 }
 
 if(empty($phonenum)){
     echo '<span style= "color: red;"> Please enter a value for Phone number.</span>';
 }else if(!is_numeric($phonenum))
 {
-    echo '<span style= "color: red;"> First Name must be letters only.</span>';
+    echo '<span style= "color: red;">  must be letters only.</span>';
 }else{
     $phonenum= mysqli_real_escape_string($conn, $phonenum);
 }
@@ -80,7 +81,7 @@ if(empty($email)){
 $address = mysqli_real_escape_string($conn, $address);
 $position = mysqli_real_escape_string($conn, $position);
 
-$sql = "INSERT INTO member( firstname, lasttname, age, gender, position, home_address, email, phonenumber, date_of_birth) VALUES('$fname', '$lname', '$age', '$gender', '$position', '$address', '$email', '$phonenumber','$dob')";
+$sql = "INSERT INTO member( firstname, lasttname, age, gender, position, home_address, email, phonenumber, date_of_birth) VALUES('$fname', '$lname', '$age', '$gender', '$position', '$address', '$email', '$phonenum','$dob')";
 
 if(mysqli_query($conn,$sql)){
     echo'added to the file';
