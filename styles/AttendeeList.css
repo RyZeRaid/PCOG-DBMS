@@ -42,6 +42,11 @@ body{
 #attendance-count{
     display: flex;
     flex-direction: row;
+    gap: 8px;
+}
+
+#member-count{
+    width: 200px;
 }
 
 a{

@@ -10,20 +10,23 @@ window.onload = function(){
         window.location.href = "logout.php";
     }
 
-    //Attendee List Script
+//------------- Attendee List Script -------------
 
+    //Requesting the number of members currently stored in the datatbase and displays it on the webpage
+    
     const htrCount = new XMLHttpRequest();
 
     htrCount.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            document.getElementById("member-count").innerHTML = this.responseText;
+            console.log(this.responseText);
+            document.getElementById("member-count").placeholder = this.responseText + " Members Currently Registered";
         }
     }
 
     htrCount.open("GET", "attendeelist.php?mode=count");
     htrCount.send();
 
-    console.log(5)
+    let table = document.querySelector(".table");
 
     let generateListBtn = document.getElementById("generateList");
     let overideListBtn = document.getElementById("overrideList");
@@ -37,20 +40,23 @@ window.onload = function(){
 
         if(e.target.id == "generateList"){
 
-            console.log("Button Press: " + e.target.id)
+            let mode = "generate";
 
-            let mode = "generate"
+            amount = document.getElementById("member-count").value;
+
+            console.log(amount)
 
             const htr = new XMLHttpRequest();
 
             htr.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
-                    document.querySelector(".table").innerHTML = this.responseText;
+                    table.innerHTML = this.responseText;
                 }
             }
 
-            htr.open("GET", "attendeelist.php?mode="+mode);
+            htr.open("GET", "attendeelist.php?mode=" + mode + "&amount=" + amount);
             htr.send();
+
 
         }else if(e.target.id == overrideList){
 
