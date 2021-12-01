@@ -24,14 +24,6 @@ foreach($idArray as $id){
 
     foreach($result as $attendant){
 
-        echo "<tr> \n";
-        echo "<td>" .$attendant['id']. "</td> \n";
-        echo "<td>" .$attendant['firstname']. "</td> \n";
-        echo "<td>" .$attendant['lasttname']. "</td> \n";
-        echo "<td>" .$attendant['position']. "</td> \n";
-        echo "<td>" .$attendant['priority']. "</td> \n";
-        echo "<tr>";
-
         $sql = "INSERT INTO attendeelist (id, firstname, lasttname, position, priority)
         VALUES ( ".$attendant['id'].", ".$attendant['firstname'].", ".$attendant['lasttname'].", ".$attendant['position'].", ".$attendant['priority'].")";
 

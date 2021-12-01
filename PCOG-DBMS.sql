@@ -94,7 +94,7 @@ CREATE TABLE `priority2` (
 
 
 DROP TABLE IF EXISTS `attendeelist`;
-CREATE TABLE `confirmed` (
+CREATE TABLE `attendeelist` (
     `id` INT(11) NOT NULL,
     `firstname` VARCHAR(255) NOT NULL ,
     `lasttname` VARCHAR(255) NOT NULL ,
