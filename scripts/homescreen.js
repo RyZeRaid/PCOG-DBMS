@@ -19,9 +19,9 @@ window.onload = function(){
         if (e.target.id === "viewDatabase"){
             window.location.href = "memberslist.php";
         }else if (e.target.id === "generateAttendee"){
-            window.location.href = "AttendeeList.html";
+            window.location.href = "Attendee-List.php";
         }else if (e.target.id === "addMember") {
-            window.location.href = "add-members.html";
+            window.location.href = "add-members.php";
         }
     }
 
