@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="styles/AttendeeList.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <script src="logout.js"></script>
+    <script src="scripts/logout.js"></script>
 </head>
 
 <header>
-    <img src="./img/pcog logo.png" alt="">
+    <img src="./img/pcog logo.png" alt="" id="pcog-logo">
     <h1>Portmore Church of God Database Management System</h1>
 
     <div class="logout" id="logout">
@@ -39,20 +39,23 @@
                 <input type="text" id="member-count" placeholder="">
             </div>
 
-            <div class="List"></div>
+            
             <div class="options">
                 <button id="generateList">Generate List</button>
                 <button id="overrideList">Override List</button>
                 <button id="confirmList">Confirm List</button>
             </div>
+            <div id="result"></div>
             <div class="table"></div>
         </main>
 
     </div>   
 </body>
 
+<!--
 <footer>
     <p>Copyright &copy; 2020, Group 1</p>
 </footer>
+-->
 
 </html>
