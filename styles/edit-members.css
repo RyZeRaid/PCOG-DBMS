@@ -8,3 +8,25 @@
     display:none;
 }
 
+table{
+    border: 1px solid black;
+}
+
+td{
+    padding:7px;
+    text-align: center;
+
+}
+
+th{
+    width:fit-content;
+    padding:7px;
+    
+}
+
+.table{
+    padding:20px;
+    display:flex;
+    align-items: center;
+}
+

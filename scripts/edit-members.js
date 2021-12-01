@@ -5,6 +5,9 @@ window.onload=function(){
     var btn2=document.querySelector("#button");
     console.log(btn2);
 
+    var dlt=document.querySelector("#dlt");
+    console.log(dlt);
+
     btn.addEventListener("click", editClick);
     numbers=/^[0-9]+$/;
 
@@ -183,9 +186,35 @@ window.onload=function(){
     
         xhr.open('GET', 'scripts/edit-members.php?id='+txt+"&fname="+ fname + "&lname=" + lname + "&dob=" + dob + "&age=" + age + "&gender=" + gender + "&position=" + position + "&add1=" + add1 + "&add2=" + add2 + "&city=" + city + "&parish=" + parish + "&email=" + email + "&phonenum=" + phonenum+"&context=edit", true);
             
-            xhr.send();
+        xhr.send();
     }
     
+    dlt.addEventListener("click",dltClick);
+
+    function dltClick(){
+        var id=document.getElementById("text").value.trim();
+        console.log(id);
+        numbers=/^[0-9]+$/ ;
+        
+        if (!id.match(numbers)){
+            document.getElementById("text").style.borderColor="red";
+            return;
+        }
+        else{
+            document.getElementById("text").style.borderColor="black";
+        }
+
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+
+
+            if(this.readyState == 4 && this.status == 200){
+                document.getElementById("table").innerHTML = this.responseText;
+            }
+        }
+        xhr.open("GET", 'scripts/dlt-members.php?id='+id, true);
+        xhr.send();
+    }
 
 
 }
