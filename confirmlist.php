@@ -24,8 +24,15 @@ foreach($idArray as $id){
 
     foreach($result as $attendant){
 
+        $aID = $attendant['id'];
+        $fname = $attendant['firstname'];
+        $lname = $attendant['lasttname'];
+        $pos = $attendant['position'];
+        $pri = $attendant['priority'];
+        
+
         $sql = "INSERT INTO attendeelist (id, firstname, lasttname, position, priority)
-        VALUES ( ".$attendant['id'].", ".$attendant['firstname'].", ".$attendant['lasttname'].", ".$attendant['position'].", ".$attendant['priority'].")";
+        VALUES ('$aID','$fname','$lname','$pos',$pri)";
 
         if ($conn->query($sql) === TRUE){
             $status = 1;
