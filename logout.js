@@ -58,10 +58,39 @@ window.onload = function(){
             htr.send();
 
 
-        }else if(e.target.id == overrideList){
+        }else if(e.target.id == "overrideList"){
 
 
-        }else if(e.target.id == confirmList){
+        }else if(e.target.id == "confirmList"){
+            console.log(e.target.id + " button pressed");
+
+            let generatedTable = document.getElementById('generatedTable');
+
+            attendeeArray = [];
+
+            for(i=2;i<generatedTable.rows.length;i+=2){
+                console.log(generatedTable.rows.item(i).cells.item(0).innerHTML);
+                id = generatedTable.rows.item(i).cells.item(0).innerHTML
+                attendeeArray.push(id)
+
+            }
+
+            console.log(attendeeArray);
+
+            const htrID = new XMLHttpRequest();
+
+
+            for(i=0;i<attendeeArray.length;i++){
+
+                htrID.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.querySelector(".List").innerHTML = this.responseText;
+                    }
+                }
+
+                htrID.open("GET", "confirmlist.php?id=" + attendeeArray[i]);
+                htrID.send();
+            }
 
         }
 

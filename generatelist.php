@@ -43,7 +43,7 @@ if($mode == 'count'){
 }elseif($mode == 'generate'){
 
     if(count($results)>0){
-        echo "<table border =\"1\" style='border-collapse: collapse'>";
+        echo "<table id=\"generatedTable\" border =\"1\" style='border-collapse: collapse'>";
 
         echo "<tr>";
         echo "<th>ID</th>";
