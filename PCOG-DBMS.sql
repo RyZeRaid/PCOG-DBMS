@@ -82,7 +82,7 @@ INSERT INTO `priority1` VALUES(0,'testfirstname', 'testlastname', 'member', 0),
 (19,'Sydeon', 'Brown', 'member', 0),
 (20,'Sarah', 'Allen', 'member', 0);
 
-DROP TABLE IF EXISTS `attendee-list`;
+DROP TABLE IF EXISTS `attendeelist`;
 CREATE TABLE `confirmed` (
     `id` INT(11) NOT NULL,
     `firstname` VARCHAR(255) NOT NULL ,

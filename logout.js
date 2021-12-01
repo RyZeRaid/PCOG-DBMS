@@ -66,31 +66,31 @@ window.onload = function(){
 
             let generatedTable = document.getElementById('generatedTable');
 
-            attendeeArray = [];
+            attendeeList = "";
 
             for(i=2;i<generatedTable.rows.length;i+=2){
+
                 console.log(generatedTable.rows.item(i).cells.item(0).innerHTML);
                 id = generatedTable.rows.item(i).cells.item(0).innerHTML
-                attendeeArray.push(id)
+                attendeeList += id.toString() + " ";
 
             }
 
-            console.log(attendeeArray);
+            console.log(attendeeList);
 
             const htrID = new XMLHttpRequest();
 
+            htrID.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
 
-            for(i=0;i<attendeeArray.length;i++){
-
-                htrID.onreadystatechange = function(){
-                    if(this.readyState == 4 && this.status == 200){
-                        document.querySelector(".List").innerHTML = this.responseText;
-                    }
+                    document.querySelector(".List").innerHTML = this.responseText;
                 }
-
-                htrID.open("GET", "confirmlist.php?id=" + attendeeArray[i]);
-                htrID.send();
             }
+
+            htrID.open("GET", "confirmlist.php?ids=" + attendeeList);
+            htrID.send();
+
+
 
         }
 

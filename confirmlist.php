@@ -12,12 +12,42 @@ if(!$conn){
     echo'Connection Error:' . mysqli_connect_error();
 }
 
-$idNum = $_GET['id'];
+$idNums = $_GET['ids'];
 
-$stmt = $conn->query("SELECT * FROM priority1 WHERE id=$idNum");
+$idArray = explode(' ',$idNums);
+$status = -1;
 
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+foreach($idArray as $id){
+    $stmt = $conn->query("SELECT * FROM priority1 WHERE id=$id");
 
-foreach($result as $mm){
-    echo $mm['firstname'];
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach($result as $attendant){
+
+        echo "<tr> \n";
+        echo "<td>" .$attendant['id']. "</td> \n";
+        echo "<td>" .$attendant['firstname']. "</td> \n";
+        echo "<td>" .$attendant['lasttname']. "</td> \n";
+        echo "<td>" .$attendant['position']. "</td> \n";
+        echo "<td>" .$attendant['priority']. "</td> \n";
+        echo "<tr>";
+
+        $sql = "INSERT INTO attendeelist (id, firstname, lasttname, position, priority)
+        VALUES ( ".$attendant['id'].", ".$attendant['firstname'].", ".$attendant['lasttname'].", ".$attendant['position'].", ".$attendant['priority'].")";
+
+        if ($conn->query($sql) === TRUE){
+            $status = 1;
+        } else {
+            $status = -1;
+        }
+    }
 }
+
+if($status==1){
+    echo "Attendees Confirmed";
+}
+
+
+
+
+
