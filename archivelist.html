@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/viewarchives.css"> 
+    <link rel="stylesheet" href="styles/memberslist.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>View Archives</title>
+    <script src="scripts/archivelist.js"></script>
+    <title>View Archive</title>
 </head>
 
 <body>
     
     <div class="container">
     <header>
-        <img src="./img/pcog logo.png" alt="">
+        <img src="./img/pcog logo.png" alt="" id= "pcog-logo">
         <h1>Portmore Church of God Database Management System</h1>
     
         <div class="logout">
@@ -25,9 +27,6 @@
         <aside class="side1">
             <div class="asiderleft">
                 <div class="buttonaside">
-                    <a href="memberslist.html">View Members</a>
-                </div>
-                <div class="buttonaside">
                     <a href="add-members.html">Add Member</a>
                 </div>
                 <div class="buttonaside">
@@ -37,25 +36,34 @@
                     <a href="overridelist.html">Override List</a>
                 </div>
                 <div class="buttonaside">
-                    <a href="confirmattendees.html">Confirm Attendees</a>
+                    <a href="memberslist.html">Members List</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="edit-members.html">Edit Member</a>
                 </div>
             </div>
         </aside>
 
         <main>
             <div class="main">
-            <h1>View Members List Archive</h1>
-                <div class="buttonb">
-                    <button class="view" id="view">View List</button>
+            <h1>Confirm Attendance of Members</h1>
+            <p>Press the button to see an archive of the attendance of the church members</p>
+
+                <div class="button">
+                    <button class="search" id="search">Show Archive</button>
                 </div>
             </div>
+            
             <div class="table" id="table"></div>
+            
         </main>
     </div>
+
+    <footer>
+        <p>Copyright &copy; 2020, Group 1</p>
+    </footer>
 </body>
 
-<footer>
-    <p>Copyright &copy; 2020, Group 1</p>
-</footer>
+
 
 </html>

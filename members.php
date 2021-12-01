@@ -55,7 +55,7 @@ else if($member !== "" && $option === "firstname" && $context === "sort"){
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo "<table border =\"1\" style='border-collapse: collapse'>";
+echo "<table id = 'info' border =\"1\" style='border-collapse: collapse'>";
 
 echo "<tr>";
 echo "<th>ID</th>";

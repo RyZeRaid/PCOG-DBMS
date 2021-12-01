@@ -4,51 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Confirm Attendees</title>
-    <link rel="stylesheet" href="styles/confirmattendees.css"/>
-    
-</head>
-
-<header>
-    
-</header>
-
-<body>
-    
-    <div class="Home">  
-        <div class="side1" id="homey">
-            <div class="asiderleft">
-                <div class="buttonaside">
-                    <button>View Members</button>
-                </div>
-                <div class="buttonaside">
-                    <button>Add Member</button>
-                </div>
-                <div class="buttonaside">
-                    <button>View Archive</button>
-                </div>
-            </div>
-        
-        </div>
-        <main id="homey">
-            <h1> Confirm Attendees</h1>
-            <div class="table">
-                
-            </div>
-            <div class="buttonb">
-                <button class="Submit">Submit</button>
-            </div>
-        </main>
-        
-        
-        
-    </div>
-    
-=======
-    <link rel="stylesheet" href="styles/confirmattendees.css"> 
+    <link rel="stylesheet" href="styles/memberslist.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <script src="scripts/memberslist.js"></script>
+    <script src="scripts/confirmattendees.js"></script>
     <title>Confirm Attendees</title>
 </head>
 
@@ -56,7 +15,7 @@
     
     <div class="container">
     <header>
-        <img src="./img/pcog logo.png" alt="">
+        <img src="./img/pcog logo.png" alt="" id= "pcog-logo">
         <h1>Portmore Church of God Database Management System</h1>
     
         <div class="logout">
@@ -68,16 +27,16 @@
         <aside class="side1">
             <div class="asiderleft">
                 <div class="buttonaside">
-                    <a href="memberslist.html">View Members</a>
-                </div>
-                <div class="buttonaside">
                     <a href="add-members.html">Add Member</a>
                 </div>
                 <div class="buttonaside">
                     <a href="AttendeeList.html">Generate List</a>
                 </div>
                 <div class="buttonaside">
-                    <a href="overridelist.html">Override List List</a>
+                    <a href="overridelist.html">Override List</a>
+                </div>
+                <div class="buttonaside">
+                    <a href="memberslist.html">Members List</a>
                 </div>
                 <div class="buttonaside">
                     <a href="viewarchives.html">View Archive</a>
@@ -87,23 +46,24 @@
 
         <main>
             <div class="main">
-            <h1>Confirm Attendees</h1>
-            <form action="#" method="post" id="form">
-                <div id = "form-div">
-                    <input type="text" name="text" id="text" placeholder="">
-                </div>
-            </form>
-                <div class="buttonb">
-                    <button class="search" id="search">Submit</button>
+            <h1>Confirm Attendance of Members</h1>
+            <p>Press the button to get the List of members that have been selected for this week.</p>
+
+                <div class="button">
+                    <button class="search" id="search">Get List</button>
                 </div>
             </div>
+            
+            <div class="table" id="table"></div>
+            
         </main>
     </div>
->>>>>>> faec294daa19a635f15ce6d4bb0eb9f5ec1f6aa0
+
+    <footer>
+        <p>Copyright &copy; 2020, Group 1</p>
+    </footer>
 </body>
 
-<footer>
-    <p>Copyright &copy; 2020, Group 1</p>
-</footer>
+
 
 </html>
