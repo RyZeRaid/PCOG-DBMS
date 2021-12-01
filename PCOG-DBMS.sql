@@ -82,6 +82,17 @@ INSERT INTO `priority1` VALUES(0,'testfirstname', 'testlastname', 'member', 0),
 (19,'Sydeon', 'Brown', 'member', 0),
 (20,'Sarah', 'Allen', 'member', 0);
 
+DROP TABLE IF EXISTS `priority2`;
+CREATE TABLE `priority2` (
+    `id` INT(11) NOT NULL,
+    `firstname` VARCHAR(255) NOT NULL ,
+    `lasttname` VARCHAR(255) NOT NULL ,
+    `position` VARCHAR(50) NOT NULL ,
+    `priority` INT(11) NOT NULL,
+    PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS `attendee-list`;
 CREATE TABLE `confirmed` (
     `id` INT(11) NOT NULL,

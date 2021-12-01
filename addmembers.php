@@ -6,8 +6,6 @@ $username = 'new_user';
 $password = 'password123';
 $dbname = 'churchofgoddb';
 
-echo'shows ';
-
 $conn = mysqli_connect($host , $username, $password, $dbname);
 if(!$conn){
     echo'Connection Error:' . mysqli_connect_error();
@@ -24,7 +22,7 @@ $email = $_GET['email'];
 $curday= new DateTime();
 $today = $curday->format('Y-m-d ');
 
-if(empty($_GET['add1']) || empty($_GET['add2']) || empty($_GET['city']) || $_GET['parish'] == "None"){
+if(empty($_GET['add1']) || empty($_GET['city']) || $_GET['parish'] == "None"){
     echo '<span style= "color: red;"> Please select a Parish and add information to Address.</span>';
     return;
 }else{
@@ -109,12 +107,45 @@ $position = mysqli_real_escape_string($conn, $position);
 
 $sql = "INSERT INTO member( firstname, lasttname, age, gender, position, home_address, email, phonenumber, date_of_birth) VALUES('$fname', '$lname', '$age', '$gender', '$position', '$address', '$email', '$phonenum','$dob')";
 
+
 if(mysqli_query($conn,$sql)){
     echo'added to the file';
 }else{
     echo'didnt write to file';
 }
 
-mysqli_close($conn);
+mysqli_close($conn); 
+
+$conn_pri = mysqli_connect($host , $username, $password, $dbname);
+if(!$conn_pri){
+    echo'Connection Error:' . mysqli_connect_error();
+}
+
+
+$stmt = mysqli_query($conn_pri,"SELECT * FROM member ORDER BY id DESC LIMIT 1");
+$results = mysqli_fetch_assoc($stmt);
+mysqli_free_result($stmt);
+
+$id_pri = mysqli_real_escape_string($conn_pri, $results['id']);
+$fname_pri = mysqli_real_escape_string($conn_pri, $results['firstname']);
+$lname_pri = mysqli_real_escape_string($conn_pri, $results['lasttname']);
+$position_pri = mysqli_real_escape_string($conn_pri, $results['position']);
+
+
+if($position_pri != "Member" || $position_pri != "member"){
+    $sql_pri = "INSERT INTO priority2( id, firstname, lasttname, position, priority) VALUES('$id_pri', '$fname_pri', '$lname_pri','$position_pri', 0)";
+}else{
+    $sql_pri = "INSERT INTO priority1( id, firstname, lasttname, position, priority) VALUES('$id_pri', '$fname_pri', '$lname_pri','$position_pri', 0)";
+}
+ 
+
+if(mysqli_query($conn_pri,$sql_pri)){
+    echo'added to the file';
+}else{
+    echo'didnt write to file';
+}
+
+
+mysqli_close($conn_pri);
 
 ?>
