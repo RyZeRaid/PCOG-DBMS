@@ -60,12 +60,6 @@ a:hover{
     color: palevioletred;
 }
 
-.List{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
 aside{
     display:flex;
     flex-direction: column;
