@@ -36,6 +36,10 @@ header img {
     height: 50px;
 }
 
+#pcog-logo:hover{
+    cursor: pointer;
+}
+
 .logo{
     display: flex;
     flex-direction: row;

@@ -2,16 +2,24 @@ window.onload = function(){
 
     let button1 = document.querySelector("#search");
     let button2 = document.querySelector("#sort");
-    let logout = document.querySelector('.logout')
 
     button1.addEventListener("click", onClick);
     button2.addEventListener("click", onClick);
     
 
-    logout.addEventListener("click", Click);
+    let logout = document.querySelector('.logout')
+    let pcogLogo = document.querySelector('#pcog-logo')
 
-    function Click(e){
-        window.location.href = "logout.php";
+    logout.addEventListener("click", clicked);
+    pcogLogo.addEventListener("click", clicked);
+
+    function clicked(e){
+        if (e.target.id === "pcog-logo"){
+            window.location.href = "HomeScreen.php";
+        }else{
+            window.location.href = "logout.php";
+        }
+        
     }
 
 

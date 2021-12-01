@@ -16,7 +16,7 @@ if(isset($_SESSION['username'])){
     </head>
     
     <header>
-        <img src='./img/pcog logo.png' alt=''>
+        <img id='pcog-logo' src='./img/pcog logo.png' alt=''>
         <h1>Portmore Church of God Database Management System</h1>
     
         <div class='logout' id='logout'>
@@ -31,6 +31,7 @@ if(isset($_SESSION['username'])){
                 <h1> Database Options</h1>
                 <button id='viewDatabase'>View Members Database</button>
                 <button id='addMember'>Add Member</button>
+                <button id='editMember'>Edit Member</button>
                 <button id='generateAttendee'>Generate Attendee List</button>
                 <button id='viewArchive'>View Archive</button>  
                 <button id='confirmAttendees'>Confirm Attendees</button>

@@ -3,12 +3,20 @@ window.onload = function(){
     console.log(8)
 
     let logout = document.querySelector('.logout')
+    let pcogLogo = document.querySelector('#pcog-logo')
 
-    logout.addEventListener("click", Click);
+    logout.addEventListener("click", clicked);
+    pcogLogo.addEventListener("click", clicked);
 
-    function Click(e){
-        window.location.href = "logout.php";
+    function clicked(e){
+        if (e.target.id === "pcog-logo"){
+            window.location.href = "HomeScreen.php";
+        }else{
+            window.location.href = "logout.php";
+        }
+        
     }
+
 
 //------------- Attendee List Script -------------
 

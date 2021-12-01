@@ -21,6 +21,10 @@ header img {
     height: 50px;
 }
 
+#pcog-logo:hover{
+    cursor: pointer;
+}
+
 .logout {
     margin-left: 700px;
     display: flex;

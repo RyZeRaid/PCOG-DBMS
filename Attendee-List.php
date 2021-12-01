@@ -12,11 +12,11 @@ if(isset($_SESSION['username'])){
         <link rel='stylesheet' href='styles/AttendeeList.css'>
         <link rel='stylesheet' href='styles/header.css'>
         <link rel='stylesheet' href='styles/footer.css'>
-        <script src='logout.js'></script>
+        <script src='scripts/logout.js'></script>
     </head>
     
     <header>
-        <img src='./img/pcog logo.png' alt=''>
+        <img id='pcog-logo' src='./img/pcog logo.png' alt=''>
         <h1>Portmore Church of God Database Management System</h1>
     
         <div class='logout' id='logout'>
@@ -31,7 +31,7 @@ if(isset($_SESSION['username'])){
             <aside>
                 <a href='memberslist.php'>View Members</a>
                 <a href='add-members.php'>Add Members</a>
-                <a href='overridelist.html'>Override List</a>
+                <a href='editmembers.php'>Edit Members</a>
                 <a href='confirmattendees.html'>Confirm Attendees</a>
                 <a href='viewarchives.html'>View Archive</a>
             </aside>
@@ -39,9 +39,8 @@ if(isset($_SESSION['username'])){
             <main>
                 <h1> Attendee List</h1>
                 <div id='attendance-count'>
-                    <label for=''></label>
-                    <input type='text' id='' placeholder='How many members will be in attendance?'>
-                    <div id='member-count'></div>
+                    <label for='member-count'>How many members will be in attendance?</label>
+                    <input type='text' id='member-count' placeholder=''>
                 </div>
     
                 <div class='List'></div>

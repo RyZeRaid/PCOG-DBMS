@@ -18,7 +18,7 @@ if(isset($_SESSION['username'])){
         
         <div class='container'>
         <header>
-            <img src='./img/pcog logo.png' alt=''>
+            <img id='pcog-logo' src='./img/pcog logo.png' alt=''>
             <h1>Portmore Church of God Database Management System</h1>
         
             <div class='logout'>

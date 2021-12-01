@@ -47,6 +47,10 @@ header img {
     cursor: pointer;
 }
 
+#pcog-logo:hover{
+    cursor: pointer;
+}
+
 aside{
     grid-area: sidebar;
     height: 1000vh;
