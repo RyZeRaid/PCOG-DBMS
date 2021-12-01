@@ -23,7 +23,7 @@ window.onload = function(){
         }
     }
 
-    htrCount.open("GET", "attendeelist.php?mode=count");
+    htrCount.open("GET", "generatelist.php?mode=count");
     htrCount.send();
 
     let table = document.querySelector(".table");
@@ -54,7 +54,7 @@ window.onload = function(){
                 }
             }
 
-            htr.open("GET", "attendeelist.php?mode=" + mode + "&amount=" + amount);
+            htr.open("GET", "generatelist.php?mode=" + mode + "&amount=" + amount);
             htr.send();
 
 
