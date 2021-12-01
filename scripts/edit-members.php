@@ -247,8 +247,6 @@ if($context=="edit"){
     echo "</table>";
 }
 
-
-
 mysqli_close($conn);
 
     
