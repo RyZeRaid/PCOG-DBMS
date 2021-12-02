@@ -28,6 +28,10 @@ window.onload = function(){
             window.location.href = "add-members.php";
         }else if (e.target.id === "editMember") {
             window.location.href = "editmembers.php";
+        }else if (e.target.id === "viewArchive"){
+            window.location.href = "archivelist.php";
+        }else if (e.target.id === "confirmAttendees"){
+            window.location.href = "confirmattendees.php";
         }
     }
 

@@ -60,17 +60,9 @@ a:hover{
     color: palevioletred;
 }
 
-.List{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
 aside{
     display:flex;
     flex-direction: column;
     height: 85vh;
     background-color: #F5F5F5;
 }
-
-

@@ -22,6 +22,8 @@ window.onload = function(){
 
     //Requesting the number of members currently stored in the datatbase and displays it on the webpage
     
+    let tableGenerated = false;
+
     const htrCount = new XMLHttpRequest();
 
     htrCount.onreadystatechange = function(){
@@ -48,9 +50,15 @@ window.onload = function(){
 
         if(e.target.id == "generateList"){
 
+            tableGenerated = true;
+
             let mode = "generate";
 
             amount = document.getElementById("member-count").value;
+
+            if(amount==""){
+                tableGenerated = false;
+            }
 
             console.log(amount)
 
@@ -70,38 +78,59 @@ window.onload = function(){
 
 
         }else if(e.target.id == "confirmList"){
+
             console.log(e.target.id + " button pressed");
 
-            let generatedTable = document.getElementById('generatedTable');
+            if(tableGenerated){
+                ans = confirm("Are you sure you want to confirm this list of attendees?");
 
-            attendeeList = "";
-
-            for(i=2;i<generatedTable.rows.length;i+=2){
-
-                console.log(generatedTable.rows.item(i).cells.item(0).innerHTML);
-                id = generatedTable.rows.item(i).cells.item(0).innerHTML
-                attendeeList += id.toString() + " ";
-
-            }
-
-            console.log(attendeeList);
-
-            const htrID = new XMLHttpRequest();
-
-            htrID.onreadystatechange = function(){
-                if(this.readyState == 4 && this.status == 200){
-
-                    document.querySelector(".List").innerHTML = this.responseText;
+                console.log(ans);
+    
+                if(ans==true){
+    
+                    let generatedTable = document.getElementById('generatedTable');
+    
+                    attendeeList = "";
+    
+                    for(i=2;i<generatedTable.rows.length;i+=2){
+    
+                        console.log(generatedTable.rows.item(i).cells.item(0).innerHTML);
+                        id = generatedTable.rows.item(i).cells.item(0).innerHTML
+                        attendeeList += id.toString() + " ";
+                    }
+    
+                    console.log(attendeeList);
+    
+                    const htrID = new XMLHttpRequest();
+    
+                    htrID.onreadystatechange = function(){
+                        if(this.readyState == 4 && this.status == 200){
+    
+                            table.innerHTML = this.responseText;
+                        }
+                    }
+    
+                    htrID.open("GET", "confirmlist.php?ids=" + attendeeList);
+                    htrID.send();
                 }
+
+            }else{
+                attendeeList="none"
+
+                console.log("The table nuh generate bro")
+
+                const htrID = new XMLHttpRequest();
+
+                htrID.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+
+                        table.innerHTML = this.responseText;
+                    }
+                }
+
+                htrID.open("GET", "confirmlist.php?ids=" + attendeeList);
+                htrID.send();
             }
-
-            htrID.open("GET", "confirmlist.php?ids=" + attendeeList);
-            htrID.send();
-
-
-
         }
-
     }
-
 }

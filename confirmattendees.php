@@ -8,17 +8,18 @@ if(isset($_SESSION['username'])){
         <meta charset='UTF-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <link rel='stylesheet' href='styles/memberslist.css'> 
+        <link rel='stylesheet' href='styles/memberslist.css'>
+        <link rel='stylesheet' href='styles/header.css'>
         <link rel='stylesheet' href='styles/footer.css'>
-        <script src='scripts/memberslist.js'></script>
-        <title>Member's List</title>
+        <script src='scripts/confirmattendees.js'></script>
+        <title>Confirm Attendees</title>
     </head>
     
     <body>
         
         <div class='container'>
         <header>
-            <img id='pcog-logo' src='./img/pcog logo.png' alt=''>
+            <img src='./img/pcog logo.png' alt='' id= 'pcog-logo'>
             <h1>Portmore Church of God Database Management System</h1>
         
             <div class='logout'>
@@ -39,7 +40,7 @@ if(isset($_SESSION['username'])){
                         <a href='editmembers.php'>Edit Members</a>
                     </div>
                     <div class='buttonaside'>
-                        <a href='confirmattendees.php'>Confirm Attendees</a>
+                        <a href='memberslist.php'>Members List</a>
                     </div>
                     <div class='buttonaside'>
                         <a href='archivelist.php'>View Archive</a>
@@ -49,34 +50,16 @@ if(isset($_SESSION['username'])){
     
             <main>
                 <div class='main'>
-                <h1>Member's List</h1>
-                <form action='#' method='post' id='form'>
-                    <div id = 'form-div'>
-                        <input type='text' name='text' id='text' placeholder=''>
-                    </div>
-                </form>
-    
-                <form>
-                    <input type='radio' id='firstname' name='f'>
-                    <label for='firstname'>First Name</label>
-    
-                    <input type='radio' id='lastname' name='f'>
-                    <label for='lastname'>Last Name</label>
-    
-                    <input type='radio' id='age' name='f'>
-                    <label for='age'>Age</label>
-    
-                    <input type='radio' id='gender' name='f'>
-                    <label for='age'>Gender</label>
-                </form>
+                <h1>Confirm Attendance of Members</h1>
+                <p>Press the button to get the List of members that have been selected for this week.</p>
     
                     <div class='button'>
-                        <button class='search' id='search'>Search</button>
-                        <button class='sort' id='sort'>Sort Ascending</button>
-                        <button class='sort' id='des'>Sort Descending</button>
+                        <button class='search' id='search'>Get List</button>
                     </div>
                 </div>
+                
                 <div class='table' id='table'></div>
+                
             </main>
         </div>
     
@@ -91,5 +74,4 @@ if(isset($_SESSION['username'])){
 }else{
     require 'header.html';
 }
-
 ?>

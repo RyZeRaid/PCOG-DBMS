@@ -11,38 +11,34 @@ $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $p
 if(!$conn){
     echo'Connection Error:' . mysqli_connect_error();
 }
-
-$stmt = null;
-$results = [];
  
 $mode = $_GET['mode'];
 
 if($mode == 'count'){
     $stmt = $conn->query("SELECT COUNT(id) FROM member");
 
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $members = reset($results);
+    $numMembers = reset($members);
+    echo $numMembers;
+
 }elseif($mode == 'generate'){
     $amount = $_GET['amount'];
 
-    if($amount == ""){
-        echo '<span style="color:red;">Please Enter The Number Of Members That Will Be In Attendance</span>';
-    }else{
-        $stmt = $conn->query("SELECT * FROM priority1 LIMIT " . $amount);
-    }
-    
-}
+    $stmt = $conn->query("SELECT COUNT(id) FROM member");
 
-if($stmt != null){
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-}
 
-
-if($mode == 'count'){
     $members = reset($results);
-    echo reset($members);
+    $numMembers = reset($members);
 
-}elseif($mode == 'generate'){
+    if($amount == "" || $amount == 0){
+        echo '<span style="color:red;">Please Enter The Number Of Members That Will Be In Attendance</span>';
+    }elseif($amount > $numMembers){
+        echo '<span style="color:red;">Please Enter A Number That Is '.$numMembers.' Or Less </span>';
+    }else{
 
-    if(count($results)>0){
         echo "<table id=\"generatedTable\" border =\"1\" style='border-collapse: collapse'>";
 
         echo "<tr>";
@@ -53,18 +49,38 @@ if($mode == 'count'){
         echo "<th>Priority</th>";
         echo "<tr>";
 
-        foreach ($results as $row){
-            echo "<tr> \n";
-            echo "<td>" .$row['id']. "</td> \n";
-            echo "<td>" .$row['firstname']. "</td> \n";
-            echo "<td>" .$row['lasttname']. "</td> \n";
-            echo "<td>" .$row['position']. "</td> \n";
-            echo "<td>" .$row['priority']. "</td> \n";
-            echo "<tr>";
-        }
+        $x=1;
+        $workingPriority = 0;
 
+        while($x < $amount){
+
+            $stmt = $conn->query("SELECT * FROM priority1 WHERE priority='$workingPriority'");
+
+            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $i = $x;
+
+            foreach ($results as $row){
+                echo "<tr> \n";
+                echo "<td>" .$row['id']. "</td> \n";
+                echo "<td>" .$row['firstname']. "</td> \n";
+                echo "<td>" .$row['lasttname']. "</td> \n";
+                echo "<td>" .$row['position']. "</td> \n";
+                echo "<td>" .$row['priority']. "</td> \n";
+                echo "<tr>";
+
+                if($i==$amount){
+                    break;
+                }
+                $i++;
+            }
+
+            $x += count($results);
+            $workingPriority++;
+
+        }
+            
         echo "</table>";
     }
     
 }
-

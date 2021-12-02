@@ -31,19 +31,19 @@ if(isset($_SESSION['username'])){
             <aside class='side1'>
                 <div class='asiderleft'>
                     <div class='buttonaside'>
-                        <a href='add-members.html'>Add Member</a>
+                        <a href='add-members.php'>Add Member</a>
                     </div>
                     <div class='buttonaside'>
-                        <a href='AttendeeList.html'>Generate List</a>
+                        <a href='Attendee-List.php'>Generate List</a>
                     </div>
                     <div class='buttonaside'>
-                        <a href='overridelist.html'>Override List</a>
+                        <a href='memberslist.php'>View Members</a>
                     </div>
                     <div class='buttonaside'>
-                        <a href='confirmattendees.html'>Confirm Attendees</a>
+                        <a href='confirmattendees.php'>Confirm Attendees</a>
                     </div>
                     <div class='buttonaside'>
-                        <a href='viewarchives.html'>View Archive</a>
+                        <a href='archivelist.php'>View Archive</a>
                     </div>
                 </div>
             </aside>

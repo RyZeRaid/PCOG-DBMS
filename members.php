@@ -52,6 +52,25 @@ else if($member !== "" && $option === "firstname" && $context === "sort"){
     $stmt = $conn->query("SELECT * FROM member WHERE gender = '$member' ORDER BY lasttname ASC;");
 }
 
+if($member === "" && $context === "des" && $option === "firstname"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY firstname DESC");
+}else if($member === "" && $context === "des" && $option === "lastname"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY lasttname DESC");
+}else if($member === "" && $context === "des" && $option === "age"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY age DESC");
+}else if($member === "" && $context === "des" && $option === "gender"){
+    $stmt = $conn->query("SELECT * FROM member ORDER BY gender DESC");
+}
+else if($member !== "" && $option === "firstname" && $context === "des"){
+    $stmt = $conn->query("SELECT * FROM member WHERE firstname LIKE '%$member%' ORDER BY firstname DESC");
+}else if($member !== "" && $option === "lastname" && $context === "des"){
+    $stmt = $conn->query("SELECT * FROM member WHERE lasttname LIKE '%$member%' ORDER BY lasttname DESC" );
+}else if($member !== "" && $option === "age" && $context === "des"){
+    $stmt = $conn->query("SELECT * FROM member WHERE age LIKE '%$member%' ORDER BY lasttname DESC");
+}else if($member !== "" && $option === "gender" && $context === "des"){
+    $stmt = $conn->query("SELECT * FROM member WHERE gender = '$member' ORDER BY lasttname DESC;");
+}
+
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

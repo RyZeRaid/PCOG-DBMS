@@ -2,9 +2,11 @@ window.onload = function(){
 
     let button1 = document.querySelector("#search");
     let button2 = document.querySelector("#sort");
+    let button3 = document.querySelector("#des");
 
     button1.addEventListener("click", onClick);
     button2.addEventListener("click", onClick);
+    button3.addEventListener("click", onClick);
     
 
     let logout = document.querySelector('.logout')
@@ -43,6 +45,8 @@ window.onload = function(){
                     xhr.open('GET', 'members.php?member='+response+"&option="+option+"&context=search", true);
                 }else if (e.target.id === "sort"){
                     xhr.open('GET', 'members.php?member='+response+"&option="+option+"&context=sort", true);
+                }else if (e.target.id === "des"){
+                    xhr.open('GET', 'members.php?member='+response+"&option="+option+"&context=des", true);
                 }
                 xhr.send();
                 return;
@@ -51,6 +55,9 @@ window.onload = function(){
 
         
         if(e.target.id === "sort" && response === ""){
+            document.getElementById("table").innerHTML = "Please Select a Sort key";
+        }
+        if(e.target.id === "des" && response === ""){
             document.getElementById("table").innerHTML = "Please Select a Sort key";
         }
 

@@ -219,7 +219,7 @@ if($context=="edit"){
             if(mysqli_query($conn,$sql)){
                 echo'';
             }else{
-                echo'=';
+                echo'';
             }
         }
 
@@ -229,7 +229,7 @@ if($context=="edit"){
         $results = mysqli_fetch_assoc($stmt);
         mysqli_free_result($stmt);
         
-        echo "<table border =\"1\" style='border-collapse: collapse'>";
+        echo "<table id = 'info' border =\"1\" style='border-collapse: collapse'>";
 
         echo "<tr>";
         echo "<th>ID</th>";
@@ -269,4 +269,3 @@ mysqli_close($conn);
 
     
 ?>
-

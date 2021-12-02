@@ -16,7 +16,7 @@ if(isset($_SESSION['username'])){
     </head>
     
     <header>
-        <img id='pcog-logo' src='./img/pcog logo.png' alt=''>
+        <img src='./img/pcog logo.png' alt='' id='pcog-logo'>
         <h1>Portmore Church of God Database Management System</h1>
     
         <div class='logout' id='logout'>
@@ -32,8 +32,8 @@ if(isset($_SESSION['username'])){
                 <a href='memberslist.php'>View Members</a>
                 <a href='add-members.php'>Add Members</a>
                 <a href='editmembers.php'>Edit Members</a>
-                <a href='confirmattendees.html'>Confirm Attendees</a>
-                <a href='viewarchives.html'>View Archive</a>
+                <a href='confirmattendees.php'>Confirm Attendees</a>
+                <a href='archivelist.php'>View Archive</a>
             </aside>
     
             <main>
@@ -43,21 +43,24 @@ if(isset($_SESSION['username'])){
                     <input type='text' id='member-count' placeholder=''>
                 </div>
     
-                <div class='List'></div>
+                
                 <div class='options'>
                     <button id='generateList'>Generate List</button>
                     <button id='overrideList'>Override List</button>
                     <button id='confirmList'>Confirm List</button>
                 </div>
+                <div id='result'></div>
                 <div class='table'></div>
             </main>
     
         </div>   
     </body>
     
+    
     <footer>
         <p>Copyright &copy; 2020, Group 1</p>
     </footer>
+    
     
     </html>";
 }else{

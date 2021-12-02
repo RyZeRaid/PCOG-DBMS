@@ -37,9 +37,9 @@ if(isset($_SESSION['username'])){
                 <div id='side'>
                     <a href='memberslist.php'>View Members</a>
                     <a href='Attendee-List.php'>Generate List</a>
-                    <a href='overridelist.html'>Override List</a>
-                    <a href='confirmattendees.html'>Confirm Attendees</a>
-                    <a href='viewarchives.html'>View Archive</a>
+                    <a href='editmembers.php'>Edit Members</a>
+                    <a href='confirmattendees.php'>Confirm Attendees</a>
+                    <a href='archivelist.php'>View Archive</a>
                 </div>   
                 
             </aside>
