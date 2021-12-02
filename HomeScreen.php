@@ -12,6 +12,7 @@ if(isset($_SESSION['username'])){
         <link rel='stylesheet' href='./styles/HomeScreen.css'>
         <link rel='stylesheet' href='./styles/footer.css'>
         <link rel='stylesheet' href='./styles/header.css'>
+        <link href='styles/tables.css' rel='stylesheet'/>
         <script src='scripts/homescreen.js'></script>
     </head>
     

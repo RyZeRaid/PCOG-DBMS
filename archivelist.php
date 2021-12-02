@@ -12,6 +12,7 @@ if(isset($_SESSION['username'])){
         <link rel='stylesheet' href='styles/header.css'>
         <link rel='stylesheet' href='styles/footer.css'>
         <script src='scripts/archivelist.js'></script>
+        <link href='styles/tables.css' rel='stylesheet'/>
         <title>View Archive</title>
     </head>
     

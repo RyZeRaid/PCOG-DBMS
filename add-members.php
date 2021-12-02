@@ -11,6 +11,7 @@ if(isset($_SESSION['username'])){
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Add Members</title>
         <link href='styles/add-members.css' rel='stylesheet'/>
+        <link href='styles/tables.css' rel='stylesheet'/>
         <script src='scripts/add-members.js'></script>
     </head>
     

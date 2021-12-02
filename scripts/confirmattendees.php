@@ -25,7 +25,7 @@ if($context === "search"){
         $date = date('d-m-y');
 
         echo"Select a check box for the members that have attended Church on ".$date."\n";
-        echo "<table id = 'info' border =\"1\" style='border-collapse: collapse' id = 'Table1'>";
+        echo "<table id = 'Table1' border =\"1\" style='border-collapse: collapse' >";
 
         echo "<tr>";
         echo "<th>ID</th>";
@@ -43,7 +43,7 @@ if($context === "search"){
             echo "<td>" .$row['lasttname']. "</td> \n";
             echo "<td>" .$row['position']. "</td> \n";
             echo "<td>" .$row['priority']. "</td> \n";
-            echo "<td><input type= 'checkbox' id = 'check' value =" .$row['id'].$row['priority']."></td> \n";
+            echo "<td><input type= 'checkbox' id = 'check' value =" .$row['id'].",".$row['priority']."></td> \n";
             echo "</tr>";
         }
         echo "</table>";
@@ -64,14 +64,14 @@ if(!$conn){
 }
     $appr = explode(",",$_GET['members_approved']);
     $pri = explode(",",$_GET['priority']);
-    
+   
     for ($x = 0; $x < sizeof($pri); $x++) {
-        $change= $pri[$x]+1;
+        $change= (int)$pri[$x]+1;
         $idnum = $appr[$x];
         $result=mysqli_real_escape_string($conn_pri, $change);
         $res=mysqli_real_escape_string($conn_pri, $idnum);
+       
         
-
         $sql = "UPDATE priority1 SET priority='$result' WHERE id='$res'";
         if(mysqli_query($conn_pri,$sql)){
             echo'';

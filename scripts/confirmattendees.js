@@ -52,8 +52,9 @@ window.onload = function(){
             //Loop through the CheckBoxes.
             for (var i = 0; i < checkBoxes.length; i++) {
                 if (checkBoxes[i].checked) {
-                    check.push(checkBoxes[i].value[0]);
-                    pri.push(checkBoxes[i].value[1]);
+                    var values = (checkBoxes[i].value).split(',');
+                    check.push(values[0]);
+                    pri.push(values[1]);
                 }
             }
             JSON.stringify(check);

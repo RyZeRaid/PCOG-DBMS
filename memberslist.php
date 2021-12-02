@@ -9,6 +9,7 @@ if(isset($_SESSION['username'])){
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='styles/memberslist.css'> 
+        <link href='styles/tables.css' rel='stylesheet'/>
         <link rel='stylesheet' href='styles/footer.css'>
         <script src='scripts/memberslist.js'></script>
         <title>Member's List</title>

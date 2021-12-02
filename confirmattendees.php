@@ -11,6 +11,8 @@ if(isset($_SESSION['username'])){
         <link rel='stylesheet' href='styles/memberslist.css'>
         <link rel='stylesheet' href='styles/header.css'>
         <link rel='stylesheet' href='styles/footer.css'>
+        <link href='styles/tables.css' rel='stylesheet'/>
+        <link rel='stylesheet' href='styles/memberslist.css'>
         <script src='scripts/confirmattendees.js'></script>
         <title>Confirm Attendees</title>
     </head>

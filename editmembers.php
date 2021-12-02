@@ -10,6 +10,7 @@ if(isset($_SESSION['username'])){
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <link rel='stylesheet' href='styles/memberslist.css'> 
         <link rel='stylesheet' href='styles/footer.css'>
+        <link href='styles/tables.css' rel='stylesheet'/>
         <link rel='stylesheet' href='styles/edit-members.css'>
         <script src='scripts/edit-members.js'></script>
         <title>Edit Member List</title>
